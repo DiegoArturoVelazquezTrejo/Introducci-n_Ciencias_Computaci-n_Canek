@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import mx.unam.ciencias.icc.*?>
+<?import mx.unam.ciencias.icc.fx.*?>
+
+<AnchorPane styleClass="background"
+            prefWidth="450.0" prefHeight="250.0"
+            fx:controller="mx.unam.ciencias.icc.fx.ControladorFormaCodigoGenetico"
+            xmlns:fx="http://javafx.com/fxml">
+  <stylesheets>
+    <URL value="@style.css" />
+  </stylesheets>
+  <children>
+    <GridPane prefWidth="380.0" prefHeight="145.0"
+              AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+              AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" >
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" maxWidth="80.0" prefWidth="80.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" maxWidth="300.0" prefWidth="250.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      </rowConstraints>
+
+      <children>
+        <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label text="Adn:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label text="Valor numérico:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label text="Categoría:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Label text="Traduccion:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+
+        <EntradaVerificable fx:id="entradaNombre"
+                            style="-fx-background-color:FFCCCC;"
+                            GridPane.columnIndex="1" GridPane.rowIndex="0">
+          <tooltip>
+            <Tooltip text="El nombre no puede ser vacío"/>
+          </tooltip>
+        </EntradaVerificable>
+
+        <EntradaVerificable fx:id="entradaAdn"
+                            style="-fx-background-color:FFCCCC;"
+                            GridPane.columnIndex="1" GridPane.rowIndex="1">
+          <tooltip>
+            <Tooltip text="El Adn no puede ser vacío"/>
+          </tooltip>
+        </EntradaVerificable>
+
+        <EntradaVerificable fx:id="entradaValorNumerico"
+                            style="-fx-background-color:FFCCCC;"
+                            GridPane.columnIndex="1" GridPane.rowIndex="2">
+          <tooltip>
+            <Tooltip text="El valor numérico debe de ser mayor a 0.0"/>
+          </tooltip>
+        </EntradaVerificable>
+
+        <EntradaVerificable fx:id="entradaCategoria"
+                            style="-fx-background-color:FFCCCC;"
+                            GridPane.columnIndex="1" GridPane.rowIndex="3">
+          <tooltip>
+            <Tooltip text="La categoría tiene que estar entre 1 y 100"/>
+          </tooltip>
+        </EntradaVerificable>
+
+        <EntradaVerificable fx:id="entradaTraduccion"
+                            style="-fx-background-color:FFCCCC;"
+                            GridPane.columnIndex="1" GridPane.rowIndex="4">
+          <tooltip>
+            <Tooltip text="La traducción no puede ser vacío"/>
+          </tooltip>
+        </EntradaVerificable>
+
+
+      </children>
+    </GridPane>
+    <ButtonBar AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+      <buttons>
+        <Button fx:id="botonAceptar" disable="true" mnemonicParsing="false"
+                onAction="#aceptar" text="Aceptar" prefWidth="120.0" />
+        <Button mnemonicParsing="false" onAction="#cancelar" text="Cancelar"
+                prefWidth="120.0" defaultButton="true" />
+      </buttons>
+    </ButtonBar>
+  </children>
+</AnchorPane>

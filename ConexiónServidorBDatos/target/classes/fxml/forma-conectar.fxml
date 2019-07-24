@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import mx.unam.ciencias.icc.fx.*?>
+
+<AnchorPane styleClass="background"
+            prefWidth="360.0" prefHeight="115.0"
+            fx:controller="mx.unam.ciencias.icc.fx.ControladorFormaConectar"
+            xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <GridPane prefWidth="360.0" prefHeight="115.0"
+              AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+              AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0" >
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" maxWidth="70.0"
+                           prefWidth="70.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" maxWidth="300.0"
+                           prefWidth="240.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      </rowConstraints>
+      <children>
+        <Label text="Servidor:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label text="Puerto:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <EntradaVerificable fx:id="entradaServidor"
+                            style="-fx-background-color:FFCCCC;"
+                            GridPane.columnIndex="1" GridPane.rowIndex="0">
+          <tooltip>
+            <Tooltip text="El servidor no puede ser vacío"/>
+          </tooltip>
+        </EntradaVerificable>
+        <EntradaVerificable fx:id="entradaPuerto"
+                            style="-fx-background-color:FFCCCC;"
+                            GridPane.columnIndex="1" GridPane.rowIndex="1">
+          <tooltip>
+            <Tooltip text="El puerto debe estar entre 1025 y 65535"/>
+          </tooltip>
+        </EntradaVerificable>
+      </children>
+    </GridPane>
+    <ButtonBar AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+      <buttons>
+        <Button fx:id="botonAceptar" disable="true" mnemonicParsing="false"
+                onAction="#conectar" text="Conectar" prefWidth="115.0" />
+        <Button mnemonicParsing="false" onAction="#cancelar" text="Cancelar"
+                prefWidth="115.0" defaultButton="true" />
+      </buttons>
+    </ButtonBar>
+  </children>
+</AnchorPane>

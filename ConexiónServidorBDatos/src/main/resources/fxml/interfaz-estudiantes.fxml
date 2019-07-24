@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import mx.unam.ciencias.icc.fx.*?>
+
+<BorderPane prefWidth="800.0" prefHeight="600.0"
+            fx:controller="mx.unam.ciencias.icc.fx.ControladorInterfazEstudiantes"
+            xmlns:fx="http://javafx.com/fxml">
+  <top>
+    <MenuBar BorderPane.alignment="CENTER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Base de Datos">
+          <items>
+            <MenuItem fx:id="menuConectar" mnemonicParsing="false"
+                      onAction="#conectar" text="Conectar...">
+              <accelerator>
+                <KeyCodeCombination alt="UP" code="N" control="DOWN"
+                                    meta="UP" shift="UP" shortcut="UP" />
+              </accelerator>
+            </MenuItem>
+            <MenuItem fx:id="menuDesconectar" mnemonicParsing="false"
+                      onAction="#desconectar" text="Desconectar">
+              <accelerator>
+                <KeyCodeCombination alt="UP" code="O" control="DOWN"
+                                    meta="UP" shift="UP" shortcut="UP" />
+              </accelerator>
+            </MenuItem>
+            <SeparatorMenuItem />
+            <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir">
+              <accelerator>
+                <KeyCodeCombination alt="UP" code="Q" control="DOWN"
+                                    meta="UP" shift="UP" shortcut="UP" />
+              </accelerator>
+            </MenuItem>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Estudiantes">
+          <items>
+            <MenuItem fx:id="menuAgregar" mnemonicParsing="false"
+                      onAction="#agregaEstudiante" text="Agregar...">
+              <accelerator>
+                <KeyCodeCombination alt="UP" code="A" control="DOWN"
+                                    meta="UP" shift="UP" shortcut="UP" />
+              </accelerator>
+            </MenuItem>
+            <MenuItem fx:id="menuEditar" mnemonicParsing="false"
+                      onAction="#editaEstudiante" text="Editar...">
+              <accelerator>
+                <KeyCodeCombination alt="UP" code="E" control="DOWN"
+                                    meta="UP" shift="UP" shortcut="UP" />
+              </accelerator>
+            </MenuItem>
+            <MenuItem fx:id="menuEliminar" mnemonicParsing="false"
+                      onAction="#eliminaEstudiantes" text="Eliminar">
+              <accelerator>
+                <KeyCodeCombination alt="UP" code="L" control="DOWN"
+                                    meta="UP" shift="UP" shortcut="UP" />
+              </accelerator>
+            </MenuItem>
+            <MenuItem fx:id="menuBuscar" mnemonicParsing="false"
+                      onAction="#buscaEstudiantes" text="Buscar...">
+              <accelerator>
+                <KeyCodeCombination alt="UP" code="B" control="DOWN"
+                                    meta="UP" shift="UP" shortcut="UP" />
+              </accelerator>
+            </MenuItem>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Ayuda">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#acercaDe"
+                      text="Acerca de..." />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </top>
+  <bottom>
+    <AnchorPane>
+      <children>
+        <ButtonBar AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0" >
+          <buttons>
+            <Button fx:id="botonAgregar" mnemonicParsing="false"
+                    onAction="#agregaEstudiante" text="Agregar"
+                    prefWidth="120.0" defaultButton="true" />
+            <Button fx:id="botonEditar" mnemonicParsing="false"
+                    onAction="#editaEstudiante" text="Editar"
+                    prefWidth="120.0" />
+            <Button fx:id="botonEliminar" mnemonicParsing="false"
+                    onAction="#eliminaEstudiantes" text="Eliminar"
+                    prefWidth="120.0" />
+            <Button fx:id="botonBuscar" mnemonicParsing="false"
+                    onAction="#buscaEstudiantes" text="Buscar"
+                    prefWidth="120.0" />
+          </buttons>
+        </ButtonBar>
+      </children>
+    </AnchorPane>
+  </bottom>
+</BorderPane>

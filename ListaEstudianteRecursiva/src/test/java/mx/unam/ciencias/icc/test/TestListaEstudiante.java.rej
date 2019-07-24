@@ -1,0 +1,12 @@
+--- src/test/java/mx/unam/ciencias/icc/test/TestListaEstudiante.java
++++ src/test/java/mx/unam/ciencias/icc/test/TestListaEstudiante.java
+@@ -56,7 +56,8 @@ public class TestListaEstudiante {
+      */
+     public TestListaEstudiante() {
+         random = new Random();
+-        total = 10 + random.nextInt(90);
++        total = 10 + random.nextInt(10);
++        // total = 10 + random.nextInt(90);
+         lista = new ListaEstudiante();
+     }
+ 

@@ -1,0 +1,116 @@
+Estructuras de Datos
+
+Forma particular de organizar datos en una computadora para poderlos
+utilizar de una manera eficiente.
+
+Para buscar el elemento mínimo de un arregl primero
+se tendría que sortear para ordenarse y ya buscar en el primer índice, haciéndolo
+más lineal.
+
+Conceptos preliminares de Estructuras de Datos
+
+
+1. TAD (TDA) tipo abstracto de Dato. Orientándonos a Java, el tipo abstracto de dato
+te permite abstraer todas las características de un objeto y desglozarlo como un dato.
+Te permite crear Estructuras de datos con objetos.
+Te permite manipular mejor el objeto en la Estructura de datos
+
+Buscar API de JAVA Integer, como customizarlo
+<Integer>
+
+2. Big O Notacion
+Ordenados de menor complejidad a mayor complejidad
+
+1. O(1) complejidad constante, complejidad más rapida del mundo
+2. O(log n ) complejidad logarítmica, está muy presente en los árboles porque la forma de buscar en ellos
+3. O(n) Complejidad lineal
+4. O(n log n) Complejidad logarítmica Linear
+5. O(n ** 2) Complejidad Cuadrática, se va a tardar un chingo
+6. O(n **  3) Complejidad cúbica es de no me jodas
+7. O(2 ** n) Complejidad exponencial, no mames
+8. O(n!) Complejidad factorial, es la peor de todas
+
+TODAS LAS COMPLEJIDADES SE BASAN EN EL EXPONENTE MAYOR DE LA FUNCIÓN
+
+ Data structures
+
+ . Array
+ . Linked List
+ . Stack
+ . Queue
+ . Binary Tree
+ . Binary Search Tree
+ . Heap
+ . Hashing
+ . Graph
+ . Matrix
+ . Misc
+ . Advanced Data Structures
+
+
+EDD LIneales
+La forma en la que buscan, eliminan, agregan y ordenan es lineal. Esas son las operaciones
+básicas de casi todas las estructuras de datos.
+Son array, linked list, stack, queue
+
+
+Array: Tiempo de acceso es constante O(1), esto es posible porque los elementos se almacenan en ubicaciones contiguas.
+
+Tiempo de búsqueda: O(n)
+para Búsqueda binaria es O(Log n) [Si la matriz está ordenada]
+
+Tiempo de inserción: O(n), el peor de los casos ocurre cuando se elimina, sucede al principio de una matriz y requiere
+cambiar todos los elementos.
+
+
+
+Lista Ligada
+Estructura de datos lineal, donde cada elemento es un objeto separado. Cada elemento de una lista consta de dos elementos
+los datos y la referencia al siguiente nodo.
+Lista Solamente ligada (no puedes regresar, tienes solo las referencias a las siguientes)
+1 -> 2 -> 3 -> 4 -> null
+Lista Doblemente ligada
+<- 1 <-> 2 <-> 3 -> null
+Lista Circular (el rabo apunta a la cabeza)
+Cualquier nodo puede ser el nodo de inicio, no tiene que recorrer toda.
+
+El tiempo de acceso de un elemento es O(n)
+TIempo de búsqueda de un elemento O(n)
+Inserción de un elemento O(1)
+Eliminación de un elemento O(1)
+
+
+Stack (ṔILA)
+Last in, first out. Es un tipo de dato abstracto que tiene las operaciones de push y pop. Se puede implementar
+usando arreglos o listas ligadas.
+
+Operaciones Push, Pop
+
+Inserción O(1)
+Eliminacion O(1)
+Tiempo de acceso O(n) Suponiendo que quiero obtener el primer elemento
+
+
+Queue (COLA)
+FIFO, first in, first out.
+
+Operaciones DeQueue enQueue
+
+Inserción O(1)
+Eliminacion O(1)
+Tiempo de acceso O(n) Suponiendo que quiero obtener el primer elemento
+
+Ejemplo, cuando los datos se transfieren de forma asíncrona.
+
+Queue Circular
+Reduce el desperdicio de espacio, en tiempo es igual que una cola, en cuestión de espacio
+te da una optimización
+
+
+
+Binary Tree
+Arbol cuyos elementos tienen máximo dos elementos. Cada elemento puede tener solo 2 hijos.
+Estructuras de datos jerárquicas. Hijo derecho e hijo izquierdo.
+El número máximo de nodos (hojas) es (2n) -1, n es el numero de niveles.
+El nuúmero máximo de nodos en total, por todo el arbol es de (2**n) -1
+ALtura mínima posible Log2 (n+1)

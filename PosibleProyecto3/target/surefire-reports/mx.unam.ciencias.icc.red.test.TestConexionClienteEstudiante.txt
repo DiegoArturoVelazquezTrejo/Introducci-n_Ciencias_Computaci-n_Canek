@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: mx.unam.ciencias.icc.red.test.TestConexionClienteEstudiante
+-------------------------------------------------------------------------------
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.426 sec

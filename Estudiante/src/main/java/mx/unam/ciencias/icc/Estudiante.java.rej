@@ -1,0 +1,90 @@
+--- src/main/java/mx/unam/ciencias/icc/Estudiante.java
++++ src/main/java/mx/unam/ciencias/icc/Estudiante.java
+@@ -27,6 +27,9 @@ public class Estudiante {
+                       double promedio,
+                       int    edad) {
+         this.nombre    = nombre;
++        this.cuenta = cuenta;
++        this.promedio = promedio;
++        this.edad = edad;
+         // Aquí va su código.
+     }
+ 
+@@ -51,7 +54,7 @@ public class Estudiante {
+      * @return el número de cuenta del estudiante.
+      */
+     public int getCuenta() {
+-        // Aquí va su código.
++        return cuenta;
+     }
+ 
+     /**
+@@ -59,7 +62,7 @@ public class Estudiante {
+      * @param cuenta el nuevo número de cuenta del estudiante.
+      */
+     public void setCuenta(int cuenta) {
+-        // Aquí va su código.
++        this.cuenta = cuenta;
+     }
+ 
+     /**
+@@ -67,7 +70,7 @@ public class Estudiante {
+      * @return el promedio del estudiante.
+      */
+     public double getPromedio() {
+-        // Aquí va su código.
++        return promedio;
+     }
+ 
+     /**
+@@ -75,7 +78,7 @@ public class Estudiante {
+      * @param promedio el nuevo promedio del estudiante.
+      */
+     public void setPromedio(double promedio) {
+-        // Aquí va su código.
++       this.promedio = promedio;
+     }
+ 
+     /**
+@@ -83,7 +86,7 @@ public class Estudiante {
+      * @return la edad del estudiante.
+      */
+     public int getEdad() {
+-        // Aquí va su código.
++        return edad;
+     }
+ 
+     /**
+@@ -91,7 +94,7 @@ public class Estudiante {
+      * @param edad la nueva edad del estudiante.
+      */
+     public void setEdad(int edad) {
+-        // Aquí va su código.
++        this.edad = edad;
+     }
+ 
+     /**
+@@ -99,7 +102,12 @@ public class Estudiante {
+      * @return una representación en cadena del estudiante.
+      */
+     public String toString() {
+-        // Aquí va su código.
++      String cadena = String.format("Nombre   : %s\n" +
++                      "Cuenta   : %09d\n" +
++                      "Promedio : %2.2f\n" +
++                      "Edad     : %d",
++              nombre, cuenta, promedio, edad);
++      return cadena;
+     }
+ 
+     /**
+@@ -111,6 +119,8 @@ public class Estudiante {
+      *         <tt>false</tt> en otro caso.
+      */
+     public boolean equals(Estudiante estudiante) {
+-        // Aquí va su código.
++        if(estudiante == null) return false;
++        else if(this.toString().equals(estudiante.toString())) return true;
++        return false; 
+     }
+ }

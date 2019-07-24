@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import mx.unam.ciencias.icc.*?>
+<?import mx.unam.ciencias.icc.fx.*?>
+
+<AnchorPane styleClass="background"
+            minWidth="360.0" minHeight="115.0" prefWidth="360.0" prefHeight="115.0"
+            fx:controller="mx.unam.ciencias.icc.fx.ControladorFormaBusquedaEstudiantes"
+            xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <GridPane minWidth="360.0" minHeight="115.0" prefWidth="360.0" prefHeight="115.0"
+              AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+              AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="10.0">
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" maxWidth="60.0" prefWidth="60.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" maxWidth="300.0" prefWidth="250.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      </rowConstraints>
+      <children>
+        <Label text="Campo:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label text="Valor:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <ComboBox fx:id="opcionesCampo" onAction="#revisaValor"
+                  GridPane.columnIndex="1" GridPane.rowIndex="0"
+                  minWidth="10.0" maxWidth="300.0" prefWidth="250.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <CampoEstudiante fx:value="NOMBRE" />
+              <CampoEstudiante fx:value="CUENTA" />
+              <CampoEstudiante fx:value="PROMEDIO" />
+              <CampoEstudiante fx:value="EDAD" />
+            </FXCollections>
+          </items>
+          <value>
+            <CampoEstudiante fx:value="NOMBRE" />
+          </value>
+        </ComboBox>
+        <EntradaVerificable fx:id="entradaValor"
+                            style="-fx-background-color:FFCCCC;"
+                            GridPane.columnIndex="1" GridPane.rowIndex="1"
+                            minWidth="10.0" maxWidth="300.0" prefWidth="250.0" >
+          <tooltip>
+            <Tooltip text="Buscar por nombre necesita al menos un carácter" />
+          </tooltip>
+        </EntradaVerificable>
+      </children>
+    </GridPane>
+    <ButtonBar AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0" >
+      <buttons>
+        <Button fx:id="botonAceptar" mnemonicParsing="false" onAction="#aceptar"
+                text="Buscar" prefWidth="120.0" disable="true"/>
+        <Button mnemonicParsing="false" onAction="#cancelar" text="Cancelar"
+                prefWidth="120.0" defaultButton="true" />
+      </buttons>
+    </ButtonBar>
+  </children>
+</AnchorPane>
